@@ -1,0 +1,94 @@
+/* CSS - Cascading Syle Sheets*/
+:root
+{
+    /* variáveis CSS*/
+    --color-background: #F0F0F7;
+    --color-primary-lighter: #9871f5;
+    --color-primary-light: #916BEA;
+    --color-primary: #8257E5;
+    --color-primary-dark:#774DD6;
+    --color-primary-darker: #6842C2;
+    --color-secondary: #04D361;
+    --color-secondary-dark: #04BF58;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #D4C2FF;
+    --color-text-title: #32264D;
+    --color-text-complement: #9C98A6;
+    --color-text-base: #6A6180;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-button-text: #FFFFFF;
+    --color-box-base: #FFFFFF;
+    --color-box-footer: #FAFAFC;
+    --color-small-info: #C1BCCC;
+
+    /* tamanho da fonte ( padrão: 16px - 100% ( relativo ao que está em cima dele ) - 1rem (root element) ) */
+    font-size: 60%; /* controle das medidas de forma relativa rem (responsividade) */
+}
+
+/* o simbolo asterístico* sinaliza um elemento qualquer*/
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+#container {
+    box model
+    border: 1px solid black;  as bordas são limites
+    padding: 40px; sentido horário
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 100px;
+    margin: 60px;
+
+    width: 300px;
+    height: 300px; 
+*/
+
+/*btfe que ta definindo a altura desses blocos/tags (html, body)*/
+html,
+body
+{
+    height: 100vh; /* height = altura */
+}
+
+body
+{
+    background: var(--color-background);
+    display: flex; /* elemento flexível (acho q de acordo com a tela) */
+    align-items: center; /* eixo vertical */
+    justify-content: center; /* eixo horizontal*/
+}
+
+/* mexendo na fonte - esses body, input, button, textarea é onde eu quero que essa fonte seja aplicada */
+body,
+input,
+button,
+textarea 
+{
+    /* font: 500 1.6rem Poppins; */
+    font-weight: 500;
+    font-family: Poppins;
+    font-size: 1.6rem;
+    color: var(--color-text-base);
+}
+
+#container 
+{
+    width: 90vw; /* width = largura*/ /*vai se adaptando*/
+    max-width: 700px;
+    /* border: 1px solid */
+}
+
+@media (min-width: 700px)
+{
+    :root
+    {
+        font-size: 62.5%; /* todo 1 rem será relativo a 10 px */
+    }
+}

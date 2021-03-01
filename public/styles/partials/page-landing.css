@@ -1,0 +1,185 @@
+/* landing page é a página inicial ?*/
+
+#page-landing
+{
+    background: var(--color-primary);
+}
+
+#page-landing #container
+{
+    color: var(--color-text-in-primary);
+}
+
+.logo-container img
+{
+    height: 10rem;
+}
+
+.logo-container
+{
+    text-align: center;
+    margin-bottom:3.2rem;
+}
+
+.logo-container h2
+{
+    font-weight: 500;
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+    margin-top: 0.8rem;
+}
+
+.hero-image
+{
+    width: 100%;
+}
+
+.buttons-container
+{
+    display: flex;
+    justify-content: center;
+    margin: 3.2rem 0; /*3.2 em cima e em baixo e 0 nas laterais*/
+}
+
+.buttons-container a
+{
+    width: 30rem;
+    height: 10.4rem;
+    
+    /* 
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    border-radius: 2rem 1rem 3rem 4rem; 
+    */
+    
+    border-radius:0.8rem; /* arrendondar as bordas */
+    margin-right: 1.6rem; /* separação entre botões*/
+
+    font: 700 2.4rem Archivo; /* ta importando a fonte do link que informamos no html*/
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: var(--color-button-text);
+
+    transition: background 0.2s;
+}
+
+.buttons-container a img
+{
+    width: 4rem;
+    margin-right: 2.4rem;
+}
+
+.buttons-container a.study 
+{
+    background: var(--color-primary-lighter);
+}
+
+.buttons-container a.study:hover
+{
+    background: var(--color-primary-light);
+}
+
+.buttons-container a.give-classes
+{
+    background: var(--color-secondary);
+    margin-right: 0rem; /* correção do espaçameto*/
+}
+
+.buttons-container a.give-classes:hover
+{
+    background: var(--color-secondary-dark);
+    margin-right: 0rem; /* correção do espaçamento */
+}
+
+
+.total-connections
+{
+    font-size: 1.8rem;
+
+    display: flex;
+    align-items:center; /* eixo vertical */
+    justify-content: center; /* eixo horizontal */
+}
+
+.total-connections img
+{
+    margin-left: 0.8rem;
+}
+
+@media (max-width: 1100px)
+{
+    :root
+    {
+    font-size: 40%; /* modificar as medidas rem */
+    }
+
+    .hero-image
+    {
+        height: 45rem;
+    }
+    
+}
+
+/* vai executar, desde que cumpra determinada condição */
+/* verifique se a largura é 1100px ou maior -> se for, execute*/
+@media(min-width: 1100px)
+{
+    /* aplicação de pixels faz mais sentido aqui porque vai ser algo mais fixo mesmo, já que a tela é de desktop, já é maior*/
+    #page-landing #container
+    {
+        max-width: 1100px; /* delimita tamanho máximo do container */
+        display: grid; /* avisa que está usando o display grid dentro do container */
+        /* grid-template-columns: 33% 33% 33%; */
+        /* grid-template-columns: 300px 300px 500px; */
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 350px 1fr;
+        grid-template-areas:
+        "proffy image image"
+        "button button texting";
+        /*gap: 60px; gap entre cada bloco da grid */
+        column-gap: 87px;
+        row-gap: 86px;
+    }
+
+    .logo-container
+    {
+        grid-area: proffy;
+        text-align: initial;
+        align-self: center; /* se alinhar ao centro do seu grid */
+        margin: 0;
+    }
+
+    .logo-container img
+    {
+        height: 127px;
+        
+    }
+
+    .hero-image
+    {
+        grid-area: image;
+        height: 350px;
+    }
+
+    .buttons-container
+    {
+        grid-area: button;
+        justify-content: flex-start; /* usamos justify e não align lá no começo (e usamos o display flex tbm, por isso o flex-start) */
+        margin: 0;
+    }
+    
+    .total-connections
+    {
+        grid-area: texting;
+        justify-self: end;
+        font-size: 1.2rem;
+    }
+}

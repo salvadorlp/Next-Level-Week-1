@@ -1,0 +1,89 @@
+<!-- Comentário-->
+<!-- <!DOCTYPE html> -> indica para os navegadores que você está usando o HTML versão 5 -->
+<!-- <html> </html> isso é uma tag <html>   -->
+<!-- Na tag <head> terá as configurações do meu documento-->
+<!-- Na tag body: todo o conteúdo visível da página-->
+<!-- A maioria das tags abertas, deveram ser fechadas, algumas se fecham sozinhas-->
+<!-- Passar o mouse em cima de algum atributo:valor/chave:valor/propriedade:valor mostra várias informações sobre aquele "comando" -> dá pra ler e aprender-->
+
+
+<!DOCTYPE html>
+<html lang="pt_br"> <!-- lang é um atributo (definirá a linguagem do html) -->
+<head>
+    <meta charset="UTF-8"> <!-- configuração do documento-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport - responsividade para vários dispositivos -->
+    <meta name="theme-color" content="#8257E5">
+    
+    <title>Proffy | Sua plataforma de estudos online</title>
+
+    <!-- Use . (ponto final) para acessar atributo de classe -->
+    <!-- Use # para indicar ao HMTL/CSS que quer acessar o ID (identificador único) -->
+    <!-- nomes de id's não podem se repetir, porque você não vai conseguir trabalhar com CSS ou JavaScript-->
+
+    <!--
+    <style>
+        
+        Cascading StyleSheet (CSS)
+        Folha de estilo em cascata
+
+        ID eh mais forte que class
+        Cascata > # (ID) > . (class) > tag
+        
+        #page-landing {
+            color: blueviolet;
+        }
+
+        h1 {
+            color: green;
+        }
+
+    </style>
+    
+    -->
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+
+    <!--A linha abaixo diz: "busque um estilo para esta página no lugar href -->
+    <link rel="stylesheet" href="/styles/main.css"> <!-- rel: relationship & href: url-->
+    <link rel="stylesheet" href="/styles/partials/page-landing.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"> <!-- Pq inverteu o rel e href? -->
+
+</head>
+<body id="page-landing">
+    
+    <div id="container">
+        <div class="logo-container">
+            <!-- <h1>Proffy</h1> tag de título h1-h6 -> head -->
+            <img src="/images/logo.svg" alt="Proffy"> <!--alt|texto alternativo da imagem (caso ela não carregue ou dê um erro aparecerá esse nome) -->
+            <h2>Sua plataforma de estudos online</h2>
+        </div>
+
+        <img class="hero-image" src="/images/landing.svg" alt="Plataforma de Estudos">
+
+        <div class="buttons-container">
+
+            <a class="study" href="/study">
+                <img src="/images/icons/study.svg" alt="Estudar">
+                Estudar
+            </a>
+
+            <a class="give-classes" href="/give-classes">
+                <img src="/images/icons/give-classes.svg" alt="Dar aulas">
+                Dar aulas
+            </a>
+
+        </div>
+
+        <p class="total-connections">
+            Total de 200 conexões já realizadas
+            <img src="/images/icons/purple-heart.svg" alt="Coração roxo">
+
+        </p>
+
+    </div>
+    
+
+</body>
+</html>
+
